@@ -86,6 +86,7 @@ public class Robot extends TimedRobot {
   private ColorMatchResult colorMatch = m_colorMatcher.matchClosestColor(detectedColor);
   private String lastColorString = "";
   private int numberOfColorChanges = 0;
+private String colorWheelTargetColor = Driverstation.getInstance().getGameSpecificMessage();
 
   //These colors have been updated with tests from March 1 in NYC
   //Each color has a decimal value for red, blue, and green in the parentheses.
@@ -479,7 +480,23 @@ if(climbMotorEnabled){
       return -number;
     }
   }
+	
+//this is my code
+private string color90Degrees(string colorOfficial) {
+	if (colorOfficial == "R") {
+		return "Blue";
+	}
+	else if (colorOfficial == "G") {
+		return "Yellow";
+	}
+	else if (colorOfficial == "Y") {
+		return "Green";
+	}
+	else {
+		return "Red";
+	}
 }
+} 
 
 
 //on first gamepad:
